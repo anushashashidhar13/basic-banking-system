@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: basic-banking-system
+spec:
+  containers:
+  - name: basic-banking-system
+    image: anushashashidhar/projectt:latest
+    ports: 
+    - containerPort: 3000
