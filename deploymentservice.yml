@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment # Kubernetes resource kind we are creating
 metadata:
-  name: basic-banking system
+  name: basic-banking-system
 spec:
   selector:
     matchLabels:
@@ -13,7 +13,7 @@ spec:
         app: nodejs
     spec:
       containers:
-        - name: basic-banking system
+        - name: basic-banking-system
           image: anushashashidhar/projectt:latest # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           ports:
@@ -25,7 +25,7 @@ spec:
 apiVersion: v1 # Kubernetes API version
 kind: Service # Kubernetes resource kind we are creating
 metadata: # Metadata of the resource kind we are creating
-  name: basic-banking system
+  name: basic-banking-system
 spec:
   selector:
     app: nodejs
